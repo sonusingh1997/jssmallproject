@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Hello H1</h1>
+    <h1>Hello H1</h1>
+    <h1>Hello H1</h1>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <h1>Hello H1</h1>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <h4>Hello H4</h4>
+    <h1>Hello H1</h1>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <button onclick="changeH1()">Change h1</button>
+    <button onclick="changeH2()">Change h2</button>
+    <button onclick="changeH3()">Change h3</button>
+    <button onclick="changeH4()">Change h4</button>
+
+    <script>
+        let h1 = document.querySelectorAll("h1");
+        console.log(h1);
+        let h2 = document.querySelectorAll("h2");
+        let h3 = document.querySelectorAll("h3");
+        let h4 = document.querySelector("h4");
+        console.log(h4)
+
+        function changeH1() {
+            for (let i = 0; i <= h1.length - 1; i++) {
+                h1[i].style.color = "red";
+            }
+        }
+        function changeH2() {
+            for (let i = 0; i <= h1.length - 1; i++) {
+                h2[i].style.color = "green";
+            }
+        }
+        function changeH3() {
+            for (let i = 0; i <= h1.length - 1; i++) {
+                h3[i].style.color = "blue";
+            }
+        }
+        function changeH4() {
+            h4.style.color = "teal";
+
+        }
+
+
+    </script>
+</body>
+
+</html>

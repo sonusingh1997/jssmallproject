@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <button id="add">add</button>
+    <button id="sub">sub</button>
+    <button id="mul">mul</button>
+    <button id="div">div</button>
+    <button id="modules">modules</button>
+    <h1></h1>
+    <script>
+        let input1 = document.querySelector("#a");
+        let input2 = document.querySelector("#b");
+        let Add = document.querySelector("#add");
+        let Sub = document.querySelector("#sub");
+        let Mul = document.querySelector("#mul");
+        let Div = document.querySelector("#div");
+        let modules = document.querySelector("#modules");
+
+        let h1 = document.querySelector('h1');
+        //for adding two numbers
+        Add.addEventListener('click', function () {
+            let add = parseInt(input1.value) + parseInt(input2.value)
+            h1.innerHTML = `Adding two number is: ${add}`
+            input1.value='';
+            input2.value='';
+
+        })
+
+        //for subtracting two numbers
+        Sub.addEventListener('click', function () {
+            let sub = parseInt(input1.value) - parseInt(input2.value)
+            h1.innerHTML = `subtracting two number is: ${sub}`
+            input1.value='';
+            input2.value='';
+
+        })
+
+        //for multiple two numbers
+        Mul.addEventListener('click', function () {
+            let mul = parseInt(input1.value) * parseInt(input2.value)
+            h1.innerHTML = `Multiplying two number is: ${mul}`
+            input1.value='';
+            input2.value='';
+        })
+
+        //for division two numbers
+        Div.addEventListener('click', function () {
+            let div = (parseFloat(input1.value) / parseFloat(input2.value)).toFixed(2);
+            h1.innerHTML = `Division two number is: ${div}`
+            input1.value='';
+            input2.value='';
+        })
+
+        //for modulus two numbers
+        modules.addEventListener('click', function () {
+            let mod = parseInt(input1.value) % parseInt(input2.value);
+            h1.innerHTML = `Modules two number is: ${mod}`
+            input1.value='';
+            input2.value='';
+        })
+
+
+
+    </script>
+</body>
+
+</html>

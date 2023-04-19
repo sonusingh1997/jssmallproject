@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom1</title>
+</head>
+
+<body>
+    <select>
+        <option value="">Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+    <input type="number" />
+    <button>check</button>
+    <br /><br />
+    <p></p>
+    <b></b>
+</body>
+
+</html>
+<script>
+    let select = document.querySelector("select");
+    let input = document.querySelector("input");
+    let btn = document.querySelector("button");
+    let p = document.querySelector("p");
+    let b = document.querySelector("b");
+
+    p.style.color = "blue";
+    p.style.fontSize = "25px";
+    p.style.fontWeight = "600px";
+    p.style.display = "inline";
+    b.style.color = "red";
+    b.style.fontSize = "25px";
+    b.style.fontWeight = "600px";
+
+    btn.addEventListener("click", genderfun);
+
+    function genderfun() {
+        let mAge = 2023 - input.value;
+        if (select.value == "male") {
+            if (mAge >= 21) {
+                p.innerHTML = "yes, you are eligible for mariege because your age is :";
+                b.innerHTML = `${mAge}`;
+            } else {
+                p.innerHTML = "No, you are eligible for mariege because your age is :";
+                b.innerHTML = `${mAge}`;
+            }
+        } else if (select.value == "female") {
+            if (mAge >= 18) {
+                p.innerHTML = "yes, you are eligible for mariege because your age is :";
+                b.innerHTML = `${mAge}`;
+            } else {
+                p.innerHTML = "No, you are eligible for mariege because your age is :";
+                b.innerHTML = `${mAge}`;
+            }
+        } else if (select.value == "other") {
+            p.innerHTML = `You are other person :)`;
+            b.style.display = "none";
+        }
+    }
+</script>

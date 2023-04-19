@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let body = document.querySelector("body");
+        body.style.padding = "20px 0 0 0";
+        // for main div
+        let main = document.createElement("main");
+        main.style.margin = "auto";
+        main.style.rowGap = "40px";
+        main.style.padding = "40px 20px";
+        main.style.border = "1px solid #bca9a9bd";
+        main.style.height = "auto";
+        main.style.width = "800px";
+        main.style.display = "flex";
+        main.style.justifyContent = "space-around";
+        main.style.alignItems = "center";
+        main.style.flexWrap = "wrap";
+        main.style.backgroundColor = "#ebe4e4";
+
+        // for create div1
+        let div1 = document.createElement("div");
+        div1.style.border = "1px solid #dbc8c8";
+        div1.style.width = "230px";
+        div1.style.height = "auto";
+        div1.style.display = "flex";
+        div1.style.flexDirection = "column";
+        div1.style.gap = "20px";
+        div1.style.justifyContent = "center";
+        div1.style.alignItems = "center";
+        div1.style.fontWeight = "600";
+        div1.style.padding = "20px 0 20px";
+        div1.style.backgroundColor = "#fff";
+
+        let div1_p = document.createElement("p");
+        div1_p.innerHTML = "Name: Sonu Kumar Singh";
+
+        let div1_img = document.createElement("img");
+        div1_img.src = "./images/img1.jpg";
+        div1_img.style.width = "184px";
+        div1_img.style.height = "150px";
+
+        let div1_a = document.createElement("a");
+        div1_a.innerHTML = "Know more...";
+        div1_a.href = "https://en.wikipedia.org/wiki/Rama";
+        div1_a.style.fontSize = "15px";
+        div1_a.target = "_blank";
+
+        //for div2
+        let div2 = document.createElement("div");
+        div2.style.border = "1px solid #dbc8c8";
+        div2.style.width = "230px";
+        div2.style.height = "auto";
+        div2.style.display = "flex";
+        div2.style.flexDirection = "column";
+        div2.style.gap = "20px";
+        div2.style.justifyContent = "center";
+        div2.style.alignItems = "center";
+        div2.style.fontWeight = "600";
+        div2.style.padding = "20px 0 20px";
+        div2.style.backgroundColor = "#fff";
+
+        let div2_p = document.createElement("p");
+        div2_p.innerHTML = "Name: Vishal Singh";
+
+        let div2_img = document.createElement("img");
+        div2_img.src = "./images/img2.jpg";
+        div2_img.style.width = "184px";
+        div2_img.style.height = "150px";
+
+        let div2_a = document.createElement("a");
+        div2_a.innerHTML = "Know more...";
+        div2_a.href = "https://en.wikipedia.org/wiki/Rama";
+        div2_a.style.fontSize = "15px";
+        div2_a.target = "_blank";
+
+        //for div3
+        let div3 = document.createElement("div");
+        div3.style.border = "1px solid #dbc8c8";
+        div3.style.width = "230px";
+        div3.style.height = "auto";
+        div3.style.display = "flex";
+        div3.style.flexDirection = "column";
+        div3.style.gap = "20px";
+        div3.style.justifyContent = "center";
+        div3.style.alignItems = "center";
+        div3.style.fontWeight = "600";
+        div3.style.padding = "20px 0 20px";
+        div3.style.backgroundColor = "#fff";
+
+        let div3_p = document.createElement("p");
+        div3_p.innerHTML = "Name: Parkash Rajput";
+
+        let div3_img = document.createElement("img");
+        div3_img.src = "./images/img3.jpg";
+        div3_img.style.width = "184px";
+        div3_img.style.height = "150px";
+
+        let div3_a = document.createElement("a");
+        div3_a.innerHTML = "Know more...";
+        div3_a.href = "https://en.wikipedia.org/wiki/Rama";
+        div3_a.style.fontSize = "15px";
+        div3_a.target = "_blank";
+
+        //for div4
+        let div4 = document.createElement("div");
+        div4.style.border = "1px solid #dbc8c8";
+        div4.style.width = "230px";
+        div4.style.height = "auto";
+        div4.style.display = "flex";
+        div4.style.flexDirection = "column";
+        div4.style.gap = "20px";
+        div4.style.justifyContent = "center";
+        div4.style.alignItems = "center";
+        div4.style.fontWeight = "600";
+        div4.style.padding = "20px 0 20px";
+        div4.style.backgroundColor = "#fff";
+
+        let div4_p = document.createElement("p");
+        div4_p.innerHTML = "Name: Himanshu Kumar";
+
+        let div4_img = document.createElement("img");
+        div4_img.src = "./images/img4.jpg";
+        div4_img.style.width = "184px";
+        div4_img.style.height = "150px";
+
+        let div4_a = document.createElement("a");
+        div4_a.innerHTML = "Know more...";
+        div4_a.href = "https://en.wikipedia.org/wiki/Rama";
+        div4_a.style.fontSize = "15px";
+        div4_a.target = "_blank";
+
+        //for append all child in body,main,div1,div2
+        body.append(main);
+        main.append(div1, div2, div3, div4);
+        div1.append(div1_p, div1_img, div1_a);
+        div2.append(div2_p, div2_img, div2_a);
+        div3.append(div3_p, div3_img, div3_a);
+        div4.append(div4_p, div4_img, div4_a);
+    </script>
+</body>
+
+</html>

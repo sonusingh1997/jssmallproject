@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>promises</h1>
+    <script>
+        class Sonu {
+            constructor(a, b) {
+               this.first=a;
+               this.second=b;
+            }
+            sum() {
+                console.log("sum is :",this.first+this.second);
+            }
+            sub() {
+                console.log("subtract is :",this.first-this.second);
+            }
+        }
+        const obj = new Sonu(10, 5);
+        console.log(obj);
+        obj.sum();
+        obj.sub();
+    </script>
+</body>
+
+</html>

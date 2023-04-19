@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="'en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice dom</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Hello H1</h1>
+    <h1>Hello H1</h1>
+    <h1>Hello H1</h1>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <h1>Hello H1</h1>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <h4>Hello H4</h4>
+    <h1>Hello H1</h1>
+    <h2>Hello H2</h2>
+    <h3>Hello H3</h3>
+    <hr>
+    <p>hi i am p</p>
+    <hr>
+    <p id="mouseoverrr">hi i am mouse over.</p>
+    <hr>
+    <button id="btn">Change H1</button>
+    <button id="btn1">Change H2</button>
+    <button id="btn2">Change H3</button>
+    <button id="btn3">Change H4</button>
+    <button id="dblclick">double click h1</button>
+
+</body>
+<script>
+    const h1 = document.querySelectorAll("h1");
+    const h2 = document.querySelectorAll("h2");
+    const h3 = document.querySelectorAll("h3");
+    const h4 = document.querySelector("h4");
+    const btn = document.querySelector("#btn");
+    const dblclick = document.querySelector("#dblclick");
+    const p = document.querySelector("p");
+    const mouseoverrr = document.querySelector("#mouseoverrr");
+
+
+    btn.addEventListener('click', function changeH1() {
+        for (i = 0; i < h1.length; i++) {
+            h1[i].style.color = "red";
+        }
+    })
+
+    btn1.addEventListener('click', function changeH1() {
+        for (i = 0; i < h2.length; i++) {
+            h2[i].style.color = "green";
+        }
+    })
+
+    btn2.addEventListener('click', function changeH1() {
+        for (i = 0; i < h3.length; i++) {
+            h3[i].style.color = "teal";
+        }
+    })
+
+    btn3.addEventListener('click', function changeH1() {
+        h4.style.color = "blue";
+
+    })
+
+    dblclick.addEventListener('dblclick', function changeH1() {
+        for (i = 0; i < h1.length; i++) {
+            h1[i].style.color = "maroon";
+        }
+    })
+
+    mouseoverrr.addEventListener('mouseover', function () {
+        mouseoverrr.style.color = "red";
+    })
+    mouseoverrr.addEventListener('mouseleave', function () {
+        mouseoverrr.style.color = "black";
+    })
+</script>
+
+</html>

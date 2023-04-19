@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF
+-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <!-- <h2 class="a s">2</h2>
+    <h3 class="a">3</h3>
+    <h4 class="a">4</h4>
+    <h5 class="a">5</h5>
+    <h6 class="a">6</h6> -->
+    <!-- <button>qSelector</button>
+        <button>qSelectorAll</button> -->
+    <script>
+        //    document.addEventListener('click',function(){
+        //     var v=document.querySelector('.a');
+        //     v.style.color="red";
+        //   })
+        //   document.addEventListener('click',function(){
+        //     var v=document.querySelectorAll('.a');
+        //     console.log(v);
+        //     for(i=0;i<v.length;i++){
+        //         console.log(v[i]);
+
+        //        v[i].style.color="red";
+        //     }
+        //   })
+        // var x=document.getElementsByClassName("s");
+        // console.log(x);
+        var body = document.querySelector("body");
+        var x = document.createElement("h1");
+        x.innerHTML = 'hello sonu you r most welcome.';
+        var y = document.createElement("h3");
+        y.innerHTML = 'hello cetpa'
+
+        var a = document.createElement("a");
+        a.innerHTML = 'click me';
+        a.href = "https://www.google.com/";
+        a.target = "_blank";
+        var img = document.createElement("img");
+        img.src = "https://static8.depositphotos.com/1401587/938/i/600/depositphotos_9381086-stock-photo-peacock-feather.jpg"
+        img.alt = "image"
+        img.style.width="50px";
+        img.style.height="50px";
+        body.append(y, x, a, img);
+
+    </script>
+</body>
+
+</html>

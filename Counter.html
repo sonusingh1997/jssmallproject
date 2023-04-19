@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>demo16</title>
+        <style>
+            .main {
+                height: 150px;
+                width: 250px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-color: teal;
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                padding: 0 0 10px 0;
+            }
+
+            span {
+                color: #fff;
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            .incdec {
+                display: flex;
+                gap: 20px;
+            }
+
+            .incdec>:nth-child(3) {
+                width: 80px;
+                font-size: 25px;
+            }
+
+            button {
+                width: 50px;
+                font-size: 25px;
+            }
+
+            button:hover {
+                background-color: black;
+                color: #fff;
+                transform: scale(1.2);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <span id="counter">0</span>
+            <div class="incdec">
+                <button id="plus">+</button>
+                <button id="minus">-</button>
+                <button id="resetbtn">reset</button>
+            </div>
+        </div>
+    </body>
+
+    </html>
+    <script>
+        //for getting value of html element
+        let counter = document.querySelector("#counter");
+        let plus = document.querySelector("#plus");
+        let minus = document.querySelector("#minus");
+        let resetbtn = document.querySelector("#resetbtn");
+
+        // function for color change of both button plus and minus.
+        function colorChange() {
+            if (parseInt(counter.innerHTML) > 0) {
+                counter.style.color = "black";
+            }
+            else {
+                counter.style.color = "#fff";
+            }
+        }
+
+        // function for plus button 
+        plus.addEventListener("click", function () {
+            counter.innerHTML = parseInt(counter.innerHTML) + 1;
+            colorChange();
+        })
+
+        // function for minus button 
+        minus.addEventListener("click", function () {
+            if (parseInt(counter.innerHTML) > 0) {
+                counter.innerHTML = parseInt(counter.innerHTML) - 1;
+            }
+            else {
+                counter.innerHTML = 0;
+            }
+
+            colorChange();
+        })
+
+        resetbtn.addEventListener("click", function () {
+            counter.innerHTML = 0;
+            counter.style.color = "#fff";
+        })
+
+    </script>

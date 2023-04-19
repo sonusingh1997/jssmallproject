@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>0</h1>
+    <button onclick="startfunc()">start</button>
+    <button onclick="stopbtn()">stop</button>
+</body>
+
+</html>
+<script>
+    const h1 = document.querySelector("h1");
+    let myinterval;
+    function startfunc() {
+        myinterval = setInterval(() => {
+            h1.innerHTML = parseInt(h1.innerHTML) + 1;
+        }, 1000)
+    }
+    function stopbtn() {
+        clearInterval(myinterval);
+        console.log("hi")
+    }
+</script>

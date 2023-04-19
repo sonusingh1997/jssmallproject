@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equive="Content-Type" content="text/html">
+    <title>Dom</title>
+
+<body>
+    <input type="number">
+    <button>click age</button>
+    <p></p>
+</body>
+</head>
+
+</html>
+<script>
+    let input = document.querySelector("input");
+    let btn = document.querySelector("button");
+    let p = document.querySelector("p");
+    btn.addEventListener('click', function () {
+        let age = 2023 - input.value;
+        if (age <= 18) {
+            p.innerHTML = `teenage because age is: ${age} year.`;
+            p.style.color = "green";
+            p.style.fontSize = "25px";
+        }
+        else if (age > 18 && age <= 50) {
+            p.innerHTML = ` adult because age is: ${age} year.`;
+            p.style.color = "blue";
+            p.style.fontSize = "25px";
+        }
+        else if (age > 50 && age <= 150) {
+            p.innerHTML = ` senior citizen because age is: ${age} year.`;
+            p.style.color = "red";
+            p.style.fontSize = "25px";
+        }
+        else {
+            p.innerHTML = `A human can't live ${age} year.`;
+            p.style.color = "blue";
+            p.style.fontSize = "25px";
+        }
+    })
+</script>

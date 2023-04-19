@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #main_div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #nav_bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: teal;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    #nav_bar> :nth-child(1) {
+        color: white;
+        font-size: 20px;
+        padding: 0 0 0 20px;
+    }
+
+    #nav_bar> :nth-child(2) {
+        display: flex;
+        gap: 20px;
+        color: white;
+        font-size: 20px;
+        padding: 0 20px 0px;
+    }
+
+    #section1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        background-color: #d6d0d0;
+
+    }
+
+    #section1 #section1_p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0 0 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: #d34949;
+    }
+
+    #section1_flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    #section1_div1 {
+        border: 1px solid rgb(187, 181, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 200px;
+        padding: 20px 0 20px 0;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #section1_div1 img {
+        width: 150px;
+        height: 145px;
+    }
+
+    #section1_div2 {
+        border: 1px solid rgb(187, 181, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 200px;
+        padding: 20px 0 20px 0;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #section1_div2 img {
+        width: 150px;
+        height: 145px;
+    }
+
+    #section1_div3 {
+        border: 1px solid rgb(187, 181, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 200px;
+        padding: 20px 0 20px 0;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #section1_div3 img {
+        width: 150px;
+        height: 145px;
+    }
+
+    /* for setion2 css */
+    #section2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        background-color: #d6d0d0;
+
+    }
+
+    #section2 #section2_p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 0 0 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: #d34949;
+    }
+
+    #section2_flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    #section2_div1 {
+        border: 1px solid rgb(187, 181, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 200px;
+        padding: 20px 0 20px 0;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #section2_div1 img {
+        width: 150px;
+        height: 145px;
+    }
+
+    #section2_div2 {
+        border: 1px solid rgb(187, 181, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 200px;
+        padding: 20px 0 20px 0;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #section2_div2 img {
+        width: 150px;
+        height: 145px;
+    }
+
+    #section2_div3 {
+        border: 1px solid rgb(187, 181, 181);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 200px;
+        padding: 20px 0 20px 0;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #section2_div3 img {
+        width: 150px;
+        height: 145px;
+    }
+</style>
+
+<body>
+
+    <script>
+        //body
+        var body = document.querySelector("body");
+        //main
+        var main = document.createElement("main");
+        main.id = "main_div";
+        //nav
+        var nav_bar = document.createElement("nav");
+        nav_bar.id = "nav_bar";
+        var nav_bar_p1 = document.createElement("p");
+        nav_bar_p1.innerHTML = "Home";
+        var nav_right_div = document.createElement("div");
+        var nav_bar_p2 = document.createElement("p");
+        nav_bar_p2.innerHTML = "About";
+        var nav_bar_p3 = document.createElement("p");
+        nav_bar_p3.innerHTML = "Contact";
+        var nav_bar_p4 = document.createElement("p");
+        nav_bar_p4.innerHTML = "Services";
+        var nav_bar_p5 = document.createElement("p");
+        nav_bar_p5.innerHTML = "Signin";
+
+        //section1
+        var section1 = document.createElement("section");
+        section1.id = "section1";
+        var section1_p = document.createElement("p");
+        section1_p.id = "section1_p";
+        section1_p.innerHTML = "STUDENT";
+
+        //card section main
+        var section1_flex = document.createElement("div");
+        section1_flex.id = "section1_flex";
+
+        //section1_div1
+        var section1_div1 = document.createElement("div");
+        section1_div1.id = "section1_div1";
+        var section1_div1_p = document.createElement("p");
+        section1_div1_p.innerHTML = "Name: Sonu kumar Singh";
+        var section1_div1_img = document.createElement("img");
+        section1_div1_img.src = "./images/img1.jpg";
+        section1_div1_img.alt = "image1";
+        var section1_div1_p1 = document.createElement("p");
+        section1_div1_p1.innerHTML = "Know more...";
+
+        //section1_div2
+        var section1_div2 = document.createElement("div");
+        section1_div2.id = "section1_div2";
+        var section1_div2_p = document.createElement("p");
+        section1_div2_p.innerHTML = "Name: Divya Singh";
+        var section1_div2_img = document.createElement("img");
+        section1_div2_img.src = "./images/img2.jpg";
+        section1_div2_img.alt = "image2";
+        var section1_div2_p1 = document.createElement("p");
+        section1_div2_p1.innerHTML = "Know more...";
+
+        //section1_div3
+        var section1_div3 = document.createElement("div");
+        section1_div3.id = "section1_div3";
+        var section1_div3_p = document.createElement("p");
+        section1_div3_p.innerHTML = "Name: Khusbhu Singh";
+        var section1_div3_img = document.createElement("img");
+        section1_div3_img.src = "./images/img3.jpg";
+        section1_div3_img.alt = "image3";
+        var section1_div3_p1 = document.createElement("p");
+        section1_div3_p1.innerHTML = "Know more...";
+
+
+        //section2
+        var section2 = document.createElement("section");
+        section2.id = "section2";
+        var section2_p = document.createElement("p");
+        section2_p.id = "section2_p";
+        section2_p.innerHTML = "STUDENT";
+
+        //card section main
+        var section2_flex = document.createElement("div");
+        section2_flex.id = "section2_flex";
+
+        //section2_div1
+        var section2_div1 = document.createElement("div");
+        section2_div1.id = "section2_div1";
+        var section2_div1_p = document.createElement("p");
+        section2_div1_p.innerHTML = "Name: Priya Singh";
+        var section2_div1_img = document.createElement("img");
+        section2_div1_img.src = "./images/img4.jpg";
+        section2_div1_img.alt = "image4";
+        var section2_div1_p1 = document.createElement("p");
+        section2_div1_p1.innerHTML = "Know more...";
+
+        //section2_div2
+        var section2_div2 = document.createElement("div");
+        section2_div2.id = "section2_div2";
+        var section2_div2_p = document.createElement("p");
+        section2_div2_p.innerHTML = "Name: Soni Singh";
+        var section2_div2_img = document.createElement("img");
+        section2_div2_img.src = "./images/img3.jpg";
+        section2_div2_img.alt = "image3";
+        var section2_div2_p1 = document.createElement("p");
+        section2_div2_p1.innerHTML = "Know more...";
+
+        //section2_div3
+        var section2_div3 = document.createElement("div");
+        section2_div3.id = "section2_div3";
+        var section2_div3_p = document.createElement("p");
+        section2_div3_p.innerHTML = "Name: Gungun Singh";
+        var section2_div3_img = document.createElement("img");
+        section2_div3_img.src = "./images/img2.jpg";
+        section2_div3_img.alt = "image2";
+        var section2_div3_p1 = document.createElement("p");
+        section2_div3_p1.innerHTML = "Know more...";
+
+
+        //   var footer = document.createElement("footer");
+
+        //  use for append elements
+        body.append(main);
+        main.append(nav_bar, section1, section2);
+        nav_bar.append(nav_bar_p1, nav_right_div);
+        nav_right_div.append(nav_bar_p2, nav_bar_p3, nav_bar_p4, nav_bar_p5);
+        // for section1
+        section1.append(section1_p, section1_flex);
+        section1_div1.append(section1_div1_p, section1_div1_img, section1_div1_p1);
+        section1_div2.append(section1_div2_p, section1_div2_img, section1_div2_p1);
+        section1_div3.append(section1_div3_p, section1_div3_img, section1_div3_p1);
+        section1_flex.append(section1_div1, section1_div2, section1_div3);
+        //for section2
+        section2.append(section2_p, section2_flex);
+        section2_div1.append(section2_div1_p, section2_div1_img, section2_div1_p1);
+        section2_div2.append(section2_div2_p, section2_div2_img, section2_div2_p1);
+        section2_div3.append(section2_div3_p, section2_div3_img, section2_div3_p1);
+        section2_flex.append(section2_div1, section2_div2, section2_div3);
+    </script>
+</body>
+
+</html>

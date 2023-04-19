@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>carousel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+           
+        }
+
+        main {
+            background-color: aqua;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            height: 600px;
+            width: 600px;
+        }
+        
+        #buttonn{
+            display: flex;
+            justify-content: space-around;
+        }
+        #pre{
+            position: relative;
+            bottom: 340px;
+            left: 53px;
+            width: 50px;
+            height: 30px;
+            border: 0;
+        }
+        #pre:hover{
+            color: teal;
+            background-color: aqua;
+            border: 0;
+            outline: 0;
+        }
+        #next{
+            position: relative;  
+            bottom: 340px; 
+            right: 52px;
+            width: 50px;
+            height: 30px;
+            border: 0;
+        }
+        #next:hover{
+            color: teal;
+            background-color: aqua;
+            border: 0;
+            outline: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img src="" alt="" />
+        <div id="buttonn">
+            <button id="pre">pre</button>
+            <button id="next">next</button>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
+<script>
+    let pre = document.querySelector("#pre");
+    let next = document.querySelector("#next");
+    let img = document.querySelector("img");
+    let arr = ["../CodeBloodedPrac/images/car.jpg",
+        "../CodeBloodedPrac/images/apples-3580560.jpg",
+        "../CodeBloodedPrac/images/flower.jpg",
+        "../CodeBloodedPrac/images/foodimg1.jpg",
+        "../CodeBloodedPrac/images/apple-1172060.jpg"];
+
+    let i = 0;
+    img.src = arr[i];
+
+    // for next
+    next.addEventListener('click', function () {
+        i++;
+        if (i >= arr.length) {
+            i = 0;
+        }
+        img.src = arr[i];
+    })
+
+    //for previous
+    pre.addEventListener('click', function () {
+        i--;
+        if (i < 0) {
+            i = arr.length - 1;
+        }
+        img.src = arr[i];
+    })
+
+</script>
